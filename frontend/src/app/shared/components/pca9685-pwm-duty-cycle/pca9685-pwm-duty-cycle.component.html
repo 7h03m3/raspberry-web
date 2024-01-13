@@ -1,0 +1,5 @@
+{{caption}}
+<mat-slider (change)="onChange()" [discrete]="true" [max]="100" [min]="0" [showTickMarks]="false" [step]="1">
+  <input [(ngModel)]="dutyCycle" matSliderThumb>
+</mat-slider>
+{{dutyCycle}}%

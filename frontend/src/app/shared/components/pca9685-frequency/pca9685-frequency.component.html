@@ -1,0 +1,7 @@
+{{caption}}
+<mat-form-field appearance="outline" class="frequency-input">
+  <mat-label>Frequenz</mat-label>
+  <input [(ngModel)]="frequency" [disabled]="disabled" matInput type="number">
+  <div matSuffix>Hz</div>
+</mat-form-field>
+<button (click)="onSave()" [disabled]="disabled" color="primary" mat-flat-button>Speichern</button>

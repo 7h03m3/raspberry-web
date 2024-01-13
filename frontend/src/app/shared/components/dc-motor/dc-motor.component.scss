@@ -1,0 +1,31 @@
+
+.state-forward {
+  background-color: lightblue;
+  min-width: 7em;
+  font-weight: bold;
+}
+
+.state-backward {
+  background-color: lightgreen;
+  min-width: 7em;
+  font-weight: bold;
+}
+
+.state-stop {
+  background-color: lightcoral;
+  min-width: 7em;
+  font-weight: bold;
+}
+
+.state-base {
+  background-color: lightgray;
+  min-width: 7em;
+}
+
+.duty-cycle {
+  min-width: 18em;
+}
+
+.frequency-input {
+  min-width: 18em;
+}

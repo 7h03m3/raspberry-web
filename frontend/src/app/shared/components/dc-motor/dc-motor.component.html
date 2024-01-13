@@ -1,0 +1,28 @@
+<p>
+  <mat-button-toggle-group (change)="onChange()" [(ngModel)]="motorState.state" [disabled]="disabled"
+                           aria-label="Font Style">
+    <mat-button-toggle [disabled]="isSelected('Backward')"
+                       [ngClass]="isSelected('Backward') ? 'state-backward' : 'state-base'" value="Backward">Rückwärts
+    </mat-button-toggle>
+    <mat-button-toggle [disabled]="isSelected('Stop')"
+                       [ngClass]="isSelected('Stop') ? 'state-stop' : 'state-base'" value="Stop">Stop
+    </mat-button-toggle>
+    <mat-button-toggle [disabled]="isSelected('Forward')"
+                       [ngClass]="isSelected('Forward') ? 'state-forward' : 'state-base'" value="Forward">Vorwärts
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</p>
+<p>
+  <mat-slider (change)="onChange()" [disabled]="disabled" [discrete]="true" [max]="100" [min]="0"
+              [showTickMarks]="false"
+              [step]="5" class="duty-cycle">
+    <input [(ngModel)]="motorState.dutyCycle" matSliderThumb>
+  </mat-slider>
+  {{motorState.dutyCycle}}%
+</p>
+<mat-form-field appearance="outline" class="frequency-input">
+  <mat-label>Frequenz</mat-label>
+  <input (change)="onChange()" [(ngModel)]="motorState.frequency" [disabled]="disabled" matInput type="number">
+  <div matSuffix>Hz</div>
+</mat-form-field>
+

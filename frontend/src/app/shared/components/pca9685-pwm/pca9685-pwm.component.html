@@ -1,0 +1,15 @@
+{{caption}}
+
+<mat-form-field appearance="outline" class="pwm-input">
+  <mat-label>On</mat-label>
+  <input [(ngModel)]="state.on" [disabled]="disable" matInput max="4095" min="0" type="number">
+  <mat-hint>0 - 4095</mat-hint>
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="pwm-input">
+  <mat-label>Off</mat-label>
+  <input [(ngModel)]="state.off" [disabled]="disable" matInput max="4095" min="0" type="number">
+  <mat-hint>0 - 4095</mat-hint>
+</mat-form-field>
+
+<button (click)="onSave()" [disabled]="disable" color="primary" mat-flat-button>Speichern</button>

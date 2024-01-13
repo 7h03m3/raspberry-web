@@ -1,0 +1,11 @@
+[Unit]
+Description=Raspberry Pi Backends
+
+[Service]
+ExecStart=nest start --watch
+WorkingDirectory=/opt/backend
+Restart=always
+RestartSec=4
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+{{caption}}
+<button (click)="onGpioSetOn()" [disabled]="state || disabledButtons"
+        [ngClass]="state && !disabledButtons ? 'button-on' : 'button-disabled'" mat-stroked-button>Ein
+</button>
+<button (click)="onGpioSetOff()" [disabled]="!state || disabledButtons"
+        [ngClass]="!state && !disabledButtons ? 'button-off' : 'button-disabled'" mat-stroked-button>Aus
+</button>
